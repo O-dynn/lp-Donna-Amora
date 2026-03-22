@@ -98,10 +98,10 @@ A ideia é transformar o projeto em uma vitrine mais forte, mostrando não apena
 
 **Adson Isan** — Itapetininga/SP  
 
-[📧 Email](mailto:ads.if2407@gmail.com) •
-[📸 Instagram](https://www.instagram.com/_ads_if_/) •
-[💼 LinkedIn](https://www.linkedin.com/in/adson-isan-mkt) •
-[💬 WhatsApp](https://wa.me/5515998584798) •
+[📧 Email](mailto:ads.if2407@gmail.com) 
+[📸 Instagram](https://www.instagram.com/_ads_if_/) 
+[💼 LinkedIn](https://www.linkedin.com/in/adson-isan-mkt) 
+[💬 WhatsApp](https://wa.me/5515998584798) 
 [🌐 Portfólio](https://o-dynn.github.io/Meu-Portfolio-EMD/)
 
 ---
