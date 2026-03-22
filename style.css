@@ -1,0 +1,720 @@
+:root {
+  --bg: #ffcbc4;
+  --bg-soft: #fff6f4;
+  --rose: #c58a84;
+  --green: #02585f;
+  --green-dark: #01464c;
+  --white: #ffffff;
+  --black: #000000;
+  --text: #1f1a19;
+  --muted: #615653;
+  --line: rgba(0, 0, 0, 0.1);
+  --shadow: 0 18px 48px rgba(38, 22, 20, 0.09);
+  --radius-xl: 34px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --container: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), transparent 18%),
+    radial-gradient(circle at bottom right, rgba(197, 138, 132, 0.16), transparent 20%),
+    linear-gradient(180deg, var(--bg) 0%, #ffd7d1 100%);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 203, 196, 0.76);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.header-inner {
+  position: relative;
+  padding: 1.3rem 0 1.2rem;
+}
+
+.brand-block {
+  text-align: center;
+}
+
+.brand {
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.brand-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+  color: var(--green);
+  letter-spacing: 0.03em;
+}
+
+.menu {
+  margin-top: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  font-size: 0.96rem;
+  color: var(--muted);
+  transition: 0.2s ease;
+}
+
+.menu a:hover {
+  color: var(--green);
+}
+
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 1.4rem;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background: var(--black);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5.5rem 0 4rem;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-glow-left {
+  left: -120px;
+  top: -80px;
+  background: rgba(2, 88, 95, 0.18);
+}
+
+.hero-glow-right {
+  right: -120px;
+  bottom: -120px;
+  background: rgba(197, 138, 132, 0.22);
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.eyebrow,
+.section-tag,
+.mini-tag,
+.slider-kicker,
+.panel-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.52rem 0.92rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  color: var(--green);
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.section-head h2,
+.official-copy h2,
+.instagram-feature-copy h3,
+.instagram-copy h3,
+.experience-copy h3,
+.panel-card h2,
+.slider-info h3,
+.brand-copy h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero h1 {
+  margin: 1rem 0 0.9rem;
+  font-size: clamp(3.8rem, 9vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.hero-lead {
+  max-width: 28ch;
+  font-size: 1.18rem;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.hero-text {
+  max-width: 58ch;
+  color: var(--muted);
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.98rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.22s ease;
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 12px 28px rgba(2, 88, 95, 0.18);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.hero-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel-card {
+  padding: 1.4rem;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  box-shadow: var(--shadow);
+}
+
+.panel-card-accent {
+  background: rgba(197, 138, 132, 0.18);
+}
+
+.panel-card h2 {
+  margin: 0.8rem 0 0.5rem;
+  font-size: 2.2rem;
+  line-height: 0.95;
+}
+
+.panel-card p,
+.brand-copy p,
+.brand-quote p,
+.section-head p,
+.slider-info p,
+.instagram-feature-copy p,
+.instagram-copy p,
+.experience-copy p,
+.official-copy p,
+.official-badge p,
+.footer-inner p {
+  color: var(--muted);
+}
+
+.section {
+  padding: 0 0 5rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.section-head.center {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-head > div {
+  max-width: 620px;
+}
+
+.section-head h2 {
+  margin: 1rem 0 0;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.section-head p {
+  max-width: 48ch;
+  margin: 0;
+}
+
+.slider-shell {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.slider-arrow {
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--green);
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: 0.2s ease;
+}
+
+.slider-arrow:hover {
+  transform: translateY(-2px);
+}
+
+.slider-stage {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.slider-frame {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+}
+
+.slides {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.slider-info {
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.54);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slider-meta-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.slider-count {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--green);
+  font-weight: 800;
+}
+
+.count-divider {
+  width: 44px;
+  height: 1px;
+  background: rgba(2, 88, 95, 0.3);
+}
+
+.slider-info h3 {
+  margin: 1.2rem 0 0.8rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.94;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(2, 88, 95, 0.22);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.slider-dot.active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--green);
+}
+
+.brand-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.brand-copy h2 {
+  margin: 1rem 0;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 0.95;
+}
+
+.brand-quote {
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: rgba(2, 88, 95, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: var(--shadow);
+}
+
+.brand-quote p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  color: var(--text);
+}
+
+.instagram-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.instagram-feature,
+.instagram-card,
+.experience-card,
+.official-box {
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: var(--shadow);
+}
+
+.instagram-feature {
+  overflow: hidden;
+}
+
+.instagram-feature-image img {
+  width: 100%;
+  aspect-ratio: 4 / 4.8;
+  object-fit: cover;
+}
+
+.instagram-feature-copy {
+  padding: 1.4rem;
+}
+
+.instagram-feature-copy h3 {
+  margin: 0.8rem 0 0.5rem;
+  font-size: 2.4rem;
+  line-height: 0.95;
+}
+
+.instagram-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.instagram-card {
+  overflow: hidden;
+}
+
+.instagram-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3.4;
+  object-fit: cover;
+}
+
+.instagram-copy {
+  padding: 1.1rem;
+}
+
+.instagram-copy h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.9rem;
+  line-height: 0.95;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  gap: 1rem;
+}
+
+.experience-card {
+  overflow: hidden;
+}
+
+.experience-card-large .experience-image img {
+  aspect-ratio: 4 / 3.1;
+}
+
+.experience-image img {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
+}
+
+.experience-copy {
+  padding: 1.2rem;
+}
+
+.experience-copy h3 {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 2rem;
+  line-height: 0.95;
+}
+
+.official-box {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.official-copy h2 {
+  margin: 1rem 0 0.8rem;
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  line-height: 0.94;
+}
+
+.official-side {
+  display: flex;
+  justify-content: center;
+}
+
+.official-badge {
+  width: min(100%, 360px);
+  padding: 1.6rem;
+  border-radius: 28px;
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 18px 38px rgba(2, 88, 95, 0.18);
+}
+
+.official-badge span {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.official-badge strong {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.7rem;
+  line-height: 0.95;
+}
+
+.official-badge p {
+  color: rgba(255, 255, 255, 0.86);
+  margin: 0;
+}
+
+.site-footer {
+  padding: 0 0 2rem;
+}
+
+.footer-inner {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(2, 88, 95, 0.16);
+  text-align: center;
+}
+
+.footer-inner p {
+  margin: 0;
+  color: var(--green);
+}
+
+@media (max-width: 1080px) {
+  .hero-grid,
+  .slider-stage,
+  .brand-layout,
+  .instagram-layout,
+  .official-box {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .experience-card-large {
+    grid-column: 1 / -1;
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .section-head.center {
+    align-items: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(calc(100% - 1.2rem), var(--container));
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .slider-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .slider-arrow {
+    display: none;
+  }
+
+  .slides {
+    min-height: 300px;
+  }
+
+  .slide img {
+    max-height: 280px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-feature-image img,
+  .instagram-image img,
+  .experience-image img {
+    aspect-ratio: 4 / 4.8;
+  }
+}
